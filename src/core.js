@@ -80,7 +80,7 @@ export default (opts) => {
 
     function getConstrainedRange() {
         const selection = _window.getSelection();
-        const range = selection.rangeCount && selection.getRangeAt(0);
+        const range = selection?.rangeCount && selection.getRangeAt(0);
         if (!range) return;
 
         const constrainedRange = constrainRange(range, options.selector);
